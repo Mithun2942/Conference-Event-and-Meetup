@@ -1,0 +1,249 @@
+/*About section css start here*/
+.about-section {
+    .section-header {
+        h2 {
+            &::after {
+                top: -25px;
+            }
+        }
+    }
+
+    .about-image {
+        border: 10px solid $white-color;
+        border-radius: 5px;
+        @extend %rel;
+        margin-bottom: 55px;
+        box-shadow: 0 0 15px 5px rgba($black-color, $alpha: .10);
+
+
+        .play-btn {
+            @extend %abs;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            i {
+                background: $white-color;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                border-radius: 50%;
+                @extend %text-center;
+                @extend %d-inline-block;
+                z-index: 1;
+                @extend %rel;
+                font-size: 20px;
+                color: $theme-color;
+
+                @include breakpoint(md) {
+                    width: 100px;
+                    height: 100px;
+                    line-height: 100px;
+                    font-size: 30px;
+
+                }
+            }
+
+            span {
+                width: 100%;
+
+                &:before {
+                    background: $white-color;
+
+                    @include breakpoint(md) {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-wrapper {
+        p {
+            line-height: 30px;
+            margin-bottom: 50px;
+        }
+
+        .about-btn-grp {
+            column-gap: 30px;
+            row-gap: 20px;
+            @extend %flex;
+            @extend %justify-center;
+        }
+    }
+}
+
+/*About section css end here*/
+
+.schedule-section {
+    .section-header {
+        p {
+            color: $white-color;
+        }
+    }
+}
+
+/*Sponsor section start here*/
+.sponsor-section {
+    .section-header {
+        p {
+            color: $white-color;
+        }
+    }
+
+    .all-sponsor {
+        max-width: 960px;
+        @extend %hidden;
+        margin: 0 auto;
+
+        h5 {
+            color: $white-color;
+            text-transform: uppercase;
+            margin-top: 0;
+        }
+
+        .platinum-sponsor,
+        .silver-sponsor {
+            @extend %text-center;
+            padding: 30px;
+
+            @include breakpoint(md) {
+                padding: 50px;
+            }
+        }
+    }
+
+    .lab-btn {
+        margin-top: 60px;
+    }
+}
+
+/*Sponsor section end here*/
+
+/*======== Gift Section start here =========*/
+.event-gift-section {
+    .image-part {
+        @extend %rel;
+    }
+
+    .section-header {
+        text-align: left;
+        @extend %ml-0;
+
+        p {
+            color: $white-color;
+        }
+    }
+
+    .gift-content {
+        p {
+            font-size: 16px;
+            line-height: 1.875;
+            text-align: left;
+            color: $white-color;
+        }
+
+        .gift-list {
+            .gift-item {
+                list-style: none;
+                color: $white-color;
+                font-size: 16px;
+                padding: 7px 0;
+                font-family: $font-family2;
+                text-align: left;
+
+                span {
+                    color: $white-color;
+                    @extend %mr-10;
+                }
+            }
+        }
+
+        .register-button {
+            @extend %mt-30;
+
+            @include breakpoint(max-lg) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+/*======== Gift Section end here =========*/
+
+
+/*======== map Section start here =========*/
+.map-section {
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.map-wrapper {
+    iframe {
+        height: 600px;
+        display: block;
+    }
+}
+
+/*======== map Section end here =========*/
+
+
+/*======== Newsletter Sectin start here =========*/
+.newsletter-section {
+    background-image: $gradient-blue;
+    padding: 50px 0;
+
+    .newsletter-wrapper {
+        h3 {
+            @extend %mb-20;
+
+            @include breakpoint(md) {
+                margin-bottom: 0;
+            }
+
+            color: $white-color;
+
+        }
+    }
+
+    .input-group {
+        input {
+            background-color: rgba($white-color, $alpha: .10);
+            border: 1px solid rgba($white-color, $alpha: .30);
+            color: $white-color;
+            padding: 1rem;
+            box-shadow: none;
+
+            @include breakpoint(lg) {
+                padding: 1rem 2rem;
+            }
+
+            &::placeholder {
+                color: $white-color;
+            }
+        }
+
+        button {
+            border: none;
+            box-shadow: none;
+            padding: 0 1rem;
+
+            @include breakpoint(lg) {
+                padding: 0 1.5rem;
+            }
+        }
+    }
+}
+
+/*======== Newsletter Sectin end here =========*/
+
+.banner-section,
+.schedule-section,
+.speakers-section,
+.sponsor-section,
+.footer-section {
+    @extend %hidden;
+}

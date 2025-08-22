@@ -1,0 +1,23 @@
+.footer-section {
+    background-size: cover;
+    background-position: center;
+
+    h3 {
+        color: $white-color;
+        text-transform: capitalize;
+    }
+
+    .social-icons {
+        li {
+            a {
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+
+                i {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
